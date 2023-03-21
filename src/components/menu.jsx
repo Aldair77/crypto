@@ -8,6 +8,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Menu() {
+
+const {actualUser, setModal}=setAuth()
+const openLogin=()=>{
+
+}
+
   return (
     <Box sx={{ flexGrow: 0 }}>
       <AppBar position="static">
@@ -24,7 +30,7 @@ export default function Menu() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             
           </Typography>
-          <Button color="inherit"><b>Login</b></Button>
+          <Button color="inherit" onClick={openLogin}><b>Login</b></Button>
         </Toolbar>
       </AppBar>
     </Box>

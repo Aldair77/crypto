@@ -4,8 +4,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import Box from '@mui/material/Box';
 import { Avatar } from "@mui/material";
-import { styled } from '@mui/material/styles';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {styled, ThemeProvider, createTheme } from '@mui/material/styles';
 
 const darkTheme = createTheme({
     palette: {
