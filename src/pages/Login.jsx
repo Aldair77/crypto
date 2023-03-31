@@ -17,23 +17,31 @@ import image from '../assets/ethhh.gif';
 import image1 from '../assets/ethereum.gif';
 
 function Login() {
+    /* ocultar la contraseña*/
     const [showPassword, setShowPassword] = React.useState(false);
-
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  }
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+        }
+        /* Estilos para el grid*/
     const paperStyle={padding:25,height:'70vh', width:280}
-    const avatarStyle={backgroundColor:'blueviolet',margin:'5vh'}
+    const gridStyle={  position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    boxShadow: 24,
+    p: 4,}
     const btnstyle={margin:'10px 0',borderRadius:'30px',transition: '0.5s'}
-  return (<>
+
+
+  return (
+        <>
+        <Grid style={gridStyle}>
         
-        <Grid height='90vh' paddingTop='10vh' display='flex' justifyContent='center' >
-        <div className='imagen' ><img src={image}/></div>
             <div className='form' elevation ={10} style ={paperStyle} >
                 <Grid align='center'>
-                   <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar> 
+                   <div className='imagen' ><img width='100vh' src={image}/></div>
                    <h2>Iniciar Sesion</h2>
                 </Grid>
                 <Box component="form"
@@ -83,7 +91,7 @@ function Login() {
                 </Typography>
                 <Typography> Tienes una cuenta?
                     <Link href='#' underline="hover">
-                        Registrate
+                        Regístrate
                     </Link>
                 </Typography>
 

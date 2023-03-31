@@ -33,7 +33,7 @@ export default function TableGrid() {
     // api traer data
     const [products, setProducts] = useState([])
 
-const endpoint = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+const endpoint = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en'
 
 const getData = async() =>{
    await axios.get(endpoint).then((response)=>{
@@ -60,6 +60,7 @@ const columns = [
   { field: 'symbol', headerName: 'SIMBOLO', width: 90 },
   { field: 'current_price', headerName: 'PRECIO', width: 100 },
   { field: 'price_change_24h', headerName: 'Market', width: 100 },
+ 
  
 ];
 

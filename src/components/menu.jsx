@@ -6,7 +6,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Dialog } from '@mui/material';
+
+import Login from '../pages/Login';
+import Modal from '@mui/material/Modal';
+
 
 export default function Menu() {
   const [open, setOpen] = React.useState(false);
@@ -37,8 +40,11 @@ export default function Menu() {
             
           </Typography>
         
-              <Button color="inherit"  onClick={handleClickOpen}><b>Login</b></Button>
-          
+              <Button color="inherit" onClick={handleClickOpen}><b>Login</b></Button>
+          <Modal open={open} onClose={handleClose}        aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description">    
+                <Login/>
+          </Modal>
         </Toolbar>
       </AppBar>
     </Box>
