@@ -15,6 +15,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import image from '../assets/ethhh.gif';
 import image1 from '../assets/ethereum.gif';
+import {GoogleButton} from 'react-google-button'
 
 function Login() {
     /* ocultar la contraseña*/
@@ -94,6 +95,9 @@ function Login() {
                         Regístrate
                     </Link>
                 </Typography>
+                <div /* botón de google*/>
+                    <GoogleButton/>
+                </div>
 
             </div>
             
